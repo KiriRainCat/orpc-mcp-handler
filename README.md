@@ -2,7 +2,7 @@
 
 Expose [oRPC](https://orpc.dev) procedures as [MCP](https://modelcontextprotocol.io) tools, resources, and prompts. Reuse your validation, middleware, and business logic.
 
-Supports MCP `2026-07-28` and oRPC v2 (`2.0.0-beta.42+`), using the official MCP TypeScript SDK.
+Supports MCP `2026-07-28` and oRPC v2 (`2.0.0-beta.44+`), using the official MCP TypeScript SDK.
 
 ## Usage
 
