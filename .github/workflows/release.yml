@@ -1,0 +1,23 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+        with: { submodules: recursive }
+
+      - uses: voidzero-dev/setup-vp@v1.21.2
+        with: { cache: true, run-install: true, registry-url: https://registry.npmjs.org }
+
+      - run: npm publish

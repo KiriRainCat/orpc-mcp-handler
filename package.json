@@ -1,0 +1,52 @@
+{
+  "name": "orpc-mcp-handler",
+  "version": "0.0.1",
+  "description": "Expose oRPC procedures as MCP tools, resources, and prompts.",
+  "keywords": [
+    "ai",
+    "mcp",
+    "orpc"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KiriRainCat/orpc-mcp-handler"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./fetch": {
+      "types": "./dist/fetch.d.mts",
+      "import": "./dist/fetch.mjs"
+    }
+  },
+  "scripts": {
+    "fix": "vp check --fix",
+    "build": "vp pack",
+    "prepublishOnly": "vp run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.3.1"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.3.1",
+    "@orpc/contract": "^2.0.0-beta.42",
+    "typescript": "~7.0.2",
+    "vite-plus": "1.3.0"
+  },
+  "peerDependencies": {
+    "@orpc/json-schema": "^2.0.0-beta.42",
+    "@orpc/server": "^2.0.0-beta.42"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.3.0"
+  }
+}

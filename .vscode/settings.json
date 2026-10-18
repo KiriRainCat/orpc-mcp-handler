@@ -1,0 +1,37 @@
+{
+  // Dictionary
+  "cSpell.words": ["modelcontextprotocol", "MRTR"],
+
+  // Nested files
+  "explorer.fileNesting.patterns": {
+    "vercel.json": "edgeone.json"
+  },
+
+  // Hidden files
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/*.tsbuildinfo": true,
+    "**/.{fallow,tanstack}": true
+  },
+
+  // Readonly files
+  "search.exclude": { "**/*.gen.*": true },
+  "files.watcherExclude": { "**/*.gen.*": true },
+  "files.readonlyInclude": { "**/*.gen.*": true },
+
+  // Typescript configs
+  "js/ts.experimental.useTsgo": true,
+
+  // Configure oxc toolchains
+  "editor.formatOnSave": true,
+  "oxc.disableNestedConfig": true,
+  "oxc.fmt.disableNestedConfig": true,
+
+  // Enable oxc toolchains
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.codeActionsOnSave": {
+    "source.sortImports": "never",
+    "source.removeUnusedImports": "never",
+    "source.fixAll.oxc": "explicit"
+  }
+}
