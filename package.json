@@ -1,6 +1,6 @@
 {
   "name": "orpc-mcp-handler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Expose oRPC procedures as MCP tools, resources, and prompts.",
   "keywords": [
     "ai",
